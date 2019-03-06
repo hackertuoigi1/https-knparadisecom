@@ -161,17 +161,7 @@ function setHeaderTranparent(e) {
 	e >= CANHCAM_APP.ACTIVE_HEADER_POSITION ? $("header").removeClass("has-tranparent") : $("header").addClass("has-tranparent")
 }
 
-function b64EncodeUnicode(e) {
-	return btoa(encodeURIComponent(e).replace(/%([0-9A-F]{2})/g, function (e, a) {
-		return String.fromCharCode("0x" + a)
-	}))
-}
 
-function b64DecodeUnicode(e) {
-	return decodeURIComponent(atob(e).split("").map(function (e) {
-		return "%" + ("00" + e.charCodeAt(0).toString(16)).slice(-2)
-	}).join(""))
-}
 if ($(document).ready(function () {
 		CANHCAM_APP.ACTIVE_BACKTOTOP && backToTop()
 	}), $(function () {
