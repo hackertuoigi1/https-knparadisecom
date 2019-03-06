@@ -161,11 +161,6 @@ function setHeaderTranparent(e) {
 	e >= CANHCAM_APP.ACTIVE_HEADER_POSITION ? $("header").removeClass("has-tranparent") : $("header").addClass("has-tranparent")
 }
 
-function canhcamID(e) {
-	for (var a = "", t = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz", n = 0; n < e; n++) a += t.charAt(Math.floor(Math.random() * t.length));
-	return a
-}
-
 function b64EncodeUnicode(e) {
 	return btoa(encodeURIComponent(e).replace(/%([0-9A-F]{2})/g, function (e, a) {
 		return String.fromCharCode("0x" + a)
